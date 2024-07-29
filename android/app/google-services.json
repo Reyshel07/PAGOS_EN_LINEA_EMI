@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "271490543376",
+    "project_id": "pagos-online-4822e",
+    "storage_bucket": "pagos-online-4822e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271490543376:android:0b213ad4ebdae23ef7ff95",
+        "android_client_info": {
+          "package_name": "com.emi.pagosonline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAPCxXsq6t6WIeb_6Bc6NprNEc8NxtALg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
