@@ -195,7 +195,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
           title: Text(mensaje),
           actions: <Widget>[
             TextButton(
-              child: Text(textoBoton),
+              child: Text(textoBoton, style: TextStyle(color:  Color.fromARGB(255, 12, 68, 114),),),
                 onPressed: onPressed               
             ),
           ],

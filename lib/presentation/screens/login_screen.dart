@@ -11,6 +11,7 @@ class LoginScreen extends StatelessWidget {
   static const name = 'LoginScreen';
   static const paht = '/LoginScreen';
   const LoginScreen({super.key});
+  
 
 
   @override
@@ -22,6 +23,7 @@ class LoginScreen extends StatelessWidget {
     final double containerSize = screenSize.height * 0.3;
     final double smallSpacing = screenSize.height * 0.02;
     final double letterSize = screenSize.height;
+    final double imgSize = screenSize.width * 0.4;
 
       return Scaffold(
         body: Stack(
@@ -61,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                       SizedBox(
                         height: topPadding,
                       ),
-                      Image.asset(AssetImageApp.getLogo),
+                      Image.asset(AssetImageApp.getLogo, width: imgSize * 1.3,),
                       SizedBox(
                         height: smallSpacing * 2,
                       ),
