@@ -74,7 +74,7 @@ class PagoService {
 
       if (response.statusCode == 200) {
          countServi.incrementCounter();
-        _mostrarDialogo(context, 'Pago exitoso', 'Aceptar', true, (){buscarEstudianteProvider.listaPagosPendientes.clear();authProvider.logOut(context);});
+        _mostrarDialogo(context, 'Pago exitoso', 'Aceptar', true, (){buscarEstudianteProvider.listaPagosPendientes.clear();authProvider.logOut(context);buscarEstudianteProvider.resetData();});
       } else {
         _mostrarDialogo(context, 'Error ${response.statusCode}: ${response.statusMessage}', 'Intentar de nuevo', false,(){context.pop();});
       }
@@ -89,7 +89,7 @@ class PagoService {
             _mostrarDialogo(context, 'Error ${e.response!.statusCode}: ${e.response!.statusMessage}', 'Intentar de nuevo', false,(){context.pop();});
           }
         } else {
-          _mostrarDialogo(context, 'Error al enviar los datos: $e', 'Intentar de nuevo', false,(){context.pop();});
+          _mostrarDialogo(context, 'Error al enviar los datos: ', 'Intentar de nuevo', false,(){context.pop();});
         }
       } else {
         _mostrarDialogo( context, 'Error al enviar los datos: $e', 'Intentar de nuevo', false,(){context.pop();});
