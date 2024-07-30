@@ -62,9 +62,9 @@ class _PagoVisaScreen extends State<PagoVisaScreen>{
           child: ListView(
             children: [
               Padding(
-                padding: EdgeInsets.all(topPadding * 0.08),
+                padding: EdgeInsets.all(topPadding * 0.05),
                 child: Container(
-                  width: screenSize.width * 0.9,
+                  width: screenSize.width * 0.95,
                   height: screenSize.height * 0.9,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black12),
@@ -432,7 +432,7 @@ class _PagoVisaScreen extends State<PagoVisaScreen>{
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   SizedBox(
-                                    width: screenSize.width * 0.4,
+                                    width: screenSize.width * 0.41,
                                     height: screenSize.height * 0.05,
                                     child: TextFormField(  
                                       style: TextStyle(fontSize: letterSize * 0.015),
@@ -478,7 +478,7 @@ class _PagoVisaScreen extends State<PagoVisaScreen>{
                                     ),
                                   ),
                                   SizedBox(
-                                    width: screenSize.width * 0.44,
+                                    width: screenSize.width * 0.46,
                                     height: screenSize.height * 0.05,
                                     child: TextFormField(
                                       style: TextStyle(fontSize: letterSize * 0.015),  
@@ -532,7 +532,7 @@ class _PagoVisaScreen extends State<PagoVisaScreen>{
                               children: [
                                 Container(
                                   height: screenSize.height * 0.05,
-                                  width: screenSize.width * 0.4,
+                                  width: screenSize.width * 0.41,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.black87),
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),
@@ -563,7 +563,7 @@ class _PagoVisaScreen extends State<PagoVisaScreen>{
                                 ),
                                 Container(
                                   height: screenSize.height * 0.05,
-                                  width: screenSize.width * 0.44,
+                                  width: screenSize.width * 0.46,
                                   decoration: BoxDecoration(
                                     border: Border.all(color: Colors.black87),
                                     borderRadius: const BorderRadius.all(Radius.circular(5)),

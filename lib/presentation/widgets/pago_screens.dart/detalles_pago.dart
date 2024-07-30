@@ -31,10 +31,10 @@ class detallespago extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(               
       child: Padding(
-        padding: EdgeInsets.only(top: topPadding * 0.05),
+        padding: EdgeInsets.only(top: topPadding * 0.02),
         child: Container(
-          width: screenSize.width * 0.9,
-          height: screenSize.height * 0.53,
+          width: screenSize.width * 0.95,
+          height: screenSize.height * 0.55,
           decoration:   BoxDecoration(
             border: Border.all(color: Colors.black12),
             borderRadius: const BorderRadius.all(Radius.circular(10))
@@ -42,7 +42,7 @@ class detallespago extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.all(smallSpacing * 0.7),
+                padding: EdgeInsets.symmetric(horizontal: smallSpacing *0.5,vertical: smallSpacing * 0.6),
                 child: Container(
                   height: screenSize.height * 0.05,
                   width: screenSize.width * 3,
@@ -100,7 +100,7 @@ class detallespago extends StatelessWidget {
               Column(                                 
                 children: [
                   SizedBox(                                      
-                    width: screenSize.width * 0.8,                                      
+                    width: screenSize.width * 0.85,                                      
                     child: Row(                                       
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -111,7 +111,7 @@ class detallespago extends StatelessWidget {
                           )
                         ),
                         SizedBox(
-                          width: screenSize.width * 0.23,
+                          width: screenSize.width * 0.20,
                         ),
                          Text('Descuento(BS)',
                           style: TextStyle(
@@ -134,7 +134,7 @@ class detallespago extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                width: screenSize.width *0.8,
+                width: screenSize.width *0.85,
                 child:  Divider(height: smallSpacing *0.05)
               ),
               SizedBox(height: smallSpacing),
@@ -143,7 +143,7 @@ class detallespago extends StatelessWidget {
                 children: [
                   SizedBox(
                     height: smallSpacing * 5,
-                    width: screenSize.width *0.8,
+                    width: screenSize.width *0.85,
                     child: Expanded(
                       child: ListView.builder(
                         padding:  EdgeInsets.symmetric( vertical: screenSize.width * 0.005),
@@ -176,12 +176,12 @@ class detallespago extends StatelessWidget {
               ),
               SizedBox(height: smallSpacing,),
               SizedBox(
-                width: screenSize.width *0.8,
+                width: screenSize.width *0.85,
                 child: Divider(height: smallSpacing * 0.05)
               ),
               SizedBox(height: smallSpacing,),
               SizedBox(
-                width: screenSize.width * 0.8,
+                width: screenSize.width * 0.85,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -205,12 +205,12 @@ class detallespago extends StatelessWidget {
               ),
               SizedBox(height: smallSpacing),
               SizedBox(
-              width: screenSize.width *0.8,
+              width: screenSize.width *0.85,
               child:  Divider(height: smallSpacing * 0.05)
               ),
               SizedBox(height: smallSpacing * 0.5),
               SizedBox(               
-                width: screenSize.width * 0.8,
+                width: screenSize.width * 0.85,
                  child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [                      
@@ -230,7 +230,7 @@ class detallespago extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: screenSize.width * 0.8,
+                width: screenSize.width * 0.85,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -250,7 +250,7 @@ class detallespago extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: screenSize.width * 0.8,
+                width: screenSize.width * 0.85,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -272,7 +272,7 @@ class detallespago extends StatelessWidget {
               ), 
               SizedBox(height: smallSpacing * 2),                      
               SizedBox(
-                width: screenSize.width * 0.8,
+                width: screenSize.width * 0.85,
                 child: Text('Pago seguro', 
                   style: TextStyle(
                     fontSize: letterSize *0.014, 

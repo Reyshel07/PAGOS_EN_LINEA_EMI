@@ -35,9 +35,9 @@ class PagoQrScreen extends StatelessWidget {
         child: ListView(
           children: [
             Padding(
-              padding:  EdgeInsets.all(topPadding * 0.08),
+              padding:  EdgeInsets.all(topPadding * 0.05),
               child: Container(
-                width: screenSize.width * 0.9,
+                width: screenSize.width * 0.95,
                 height: screenSize.height * 0.8,
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.black12),
@@ -108,7 +108,7 @@ class PagoQrScreen extends StatelessWidget {
                         SizedBox(height: smallSpacing * 1),  
                         Container(
                           width: screenSize.width * 0.8,
-                          height: smallSpacing * 10,
+                          height: smallSpacing * 11,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color.fromARGB(255, 12, 68, 114)

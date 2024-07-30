@@ -36,6 +36,8 @@ class _datosenvioState extends State<datosenvio> {
   @override
   Widget build(BuildContext context) {
     final buscarEstudianteProvider =Provider.of<BucarEstudianteProvider>(context);
+    final screenSize = MediaQuery.of(context).size;
+    final double smallSpacing = screenSize.height * 0.02;
     final List<String> option = [
       'Céluda de Identidad',
       'CI Extranjero',
@@ -48,7 +50,7 @@ class _datosenvioState extends State<datosenvio> {
       key: widget._formKey,
       child: Padding(padding: EdgeInsets.only(top: widget.topPadding * 0.05),
       child: Container(
-        width: widget.screenSize.width * 0.9,
+        width: widget.screenSize.width * 0.95,
         height: widget.screenSize.height * 0.35,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.black12),
@@ -57,7 +59,7 @@ class _datosenvioState extends State<datosenvio> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(widget.smallSpacing * 0.7),
+              padding: EdgeInsets.symmetric(horizontal: smallSpacing *0.5,vertical: smallSpacing * 0.6),
               child: Container(
                 height: widget.screenSize.height * 0.05,
                 width: widget.screenSize.width * 3,
@@ -91,7 +93,7 @@ class _datosenvioState extends State<datosenvio> {
             ),
             SizedBox(height: widget.smallSpacing * 0.4),
             SizedBox(
-              width: widget.screenSize.width * 0.8,
+              width: widget.screenSize.width * 0.86,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [                                       
@@ -100,7 +102,7 @@ class _datosenvioState extends State<datosenvio> {
                       border: Border.all(color: Colors.black87),
                       borderRadius: const BorderRadius.all(Radius.circular(5)),
                     ),
-                    width: widget.screenSize.width * 0.48,
+                    width: widget.screenSize.width * 0.50,
                     height: widget.screenSize.height * 0.05,
                     child: DropdownButton<String>(  
                       padding: EdgeInsets.all(widget.topPadding * 0.05),            
@@ -177,7 +179,7 @@ class _datosenvioState extends State<datosenvio> {
             ),
             SizedBox(height: widget.smallSpacing * 1,),
             SizedBox(
-              width: widget.screenSize.width * 0.8,
+              width: widget.screenSize.width * 0.86,
               height: widget.screenSize.height * 0.05,
               child: TextFormField(
                 style: TextStyle(fontSize: widget.letterSize * 0.019),     
@@ -227,7 +229,7 @@ class _datosenvioState extends State<datosenvio> {
             ),
             SizedBox(height: widget.smallSpacing * 1),
             SizedBox(
-              width: widget.screenSize.width * 0.8,
+              width: widget.screenSize.width * 0.86,
               height: widget.screenSize.height * 0.05,
               child: TextFormField( 
                 style: TextStyle(fontSize: widget.letterSize * 0.019), 

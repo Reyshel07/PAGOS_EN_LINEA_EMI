@@ -37,8 +37,8 @@ class formapago extends StatelessWidget {
     return Container(
       child:  Padding(padding: EdgeInsets.only(top: topPadding * 0.05),
       child: Container(
-        width: screenSize.width * 0.9,
-        height: screenSize.height * 0.6,
+        width: screenSize.width * 0.95,
+        height: screenSize.height * 0.65,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.black12),
           borderRadius: const BorderRadius.all(Radius.circular(10))
@@ -46,7 +46,7 @@ class formapago extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.all(smallSpacing * 0.5),
+              padding: EdgeInsets.symmetric(horizontal: smallSpacing *0.5,vertical: smallSpacing * 0.6),
               child: Container(
                 height: screenSize.height * 0.05,
                 width: screenSize.width * 3,

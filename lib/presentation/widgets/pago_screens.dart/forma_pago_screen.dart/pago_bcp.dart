@@ -54,9 +54,9 @@ class _PagoBcpScreenState extends State<PagoBcpScreen> {
           child: ListView(
             children: [
               Padding(
-                padding: EdgeInsets.all(topPadding * 0.08),
+                padding: EdgeInsets.all(topPadding * 0.05),
                 child: Container(
-                  width: screenSize.width * 0.9,
+                  width: screenSize.width * 0.95,
                   height: screenSize.height * 0.8,
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.black12),
