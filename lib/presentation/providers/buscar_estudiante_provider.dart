@@ -60,7 +60,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
       if (e.response?.statusCode == 400) {
         _showErrorDialog(context, "Usuario no encontrado", "Volver a ingresar el CI o Codigo correcto",true,(){context.pop();});
       } else {
-        _showErrorDialog(context, "Error", "Error al realizar la solicitud: ${e.message}",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
+        _showErrorDialog(context, "Error", "Error al realizar la solicitud: Error de conexion",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
       }
     } catch (e) {
       _showErrorDialog(context, "Error inesperado", "Ocurrió un error: $e",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
@@ -102,7 +102,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
       if (e.response?.statusCode == 400) {
         _showErrorDialog(context, "Error", "Inicio de sesión caducado",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
       } else {
-        _showErrorDialog(context, "Error", "Error al realizar la solicitud: ${e.message}",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
+        _showErrorDialog(context, "Error", "Error al realizar la solicitud: Error de conexion",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
       }
     } catch (e) {
       _showErrorDialog(context, "Error inesperado", "Ocurrió un error: volver a intentar",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});

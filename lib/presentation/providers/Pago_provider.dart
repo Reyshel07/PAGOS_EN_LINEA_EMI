@@ -16,6 +16,7 @@ class PagoService {
   Future<void> enviarDatos(BuildContext context) async {
     final prefs = await SharedPreferences.getInstance();
     final countServi = CountersServices();
+    final increment = CountersServices();
     String token = prefs.getString('token') ?? '';
     String cuf = _generarCUF();
     String fechaPago = _obtenerFechaActual();
@@ -74,6 +75,7 @@ class PagoService {
 
       if (response.statusCode == 200) {
          countServi.incrementCounter();
+         increment.incremenNumCity(context);
         _mostrarDialogo(context, 'Pago exitoso', 'Aceptar', true, (){buscarEstudianteProvider.listaPagosPendientes.clear();authProvider.logOut(context);buscarEstudianteProvider.resetData();});
       } else {
         _mostrarDialogo(context, 'Error ${response.statusCode}: ${response.statusMessage}', 'Intentar de nuevo', false,(){context.pop();});
