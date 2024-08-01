@@ -47,8 +47,8 @@ class PagoService {
 
     
     String obtenerCity;
-    int numF;
-    Future incrementNumF;
+    int? numF;
+    Future? incrementNumF;
     int numLp = await countServi.obtenerGetLp();
     int numTro = await countServi.obtenerGetTro();
     int numCocha = await countServi.obtenerGetCocha();
@@ -65,7 +65,7 @@ class PagoService {
       numF = numCocha;
     }else if(obtenerCity == "Riberalta"){
       numF = numRi;
-    }else{
+    }else if(obtenerCity == "Santa Cruz"){
       numF = numScruz;
     }
 
@@ -77,7 +77,7 @@ class PagoService {
       incrementNumF = countServi.increNumCocha();
     }else if(obtenerCity == "Riberalta"){
       incrementNumF = countServi.increNumRi();
-    }else {
+    }else if(obtenerCity == "Santa Cruz"){
       incrementNumF = countServi.increNumScruz();
     }
 
