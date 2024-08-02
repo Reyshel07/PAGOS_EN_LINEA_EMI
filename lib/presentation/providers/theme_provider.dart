@@ -1,4 +1,4 @@
-import 'package:PAGOS_EN_LINIA_EMI/config/theme/theme.dart';
+import 'package:pagos_en_linea_emi/config/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 class ThemeProvider extends ChangeNotifier {

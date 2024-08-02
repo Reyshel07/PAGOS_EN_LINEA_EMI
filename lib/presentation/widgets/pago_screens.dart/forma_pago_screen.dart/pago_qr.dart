@@ -1,5 +1,5 @@
-import 'package:PAGOS_EN_LINIA_EMI/config/theme/extension_theme.dart';
-import 'package:PAGOS_EN_LINIA_EMI/utils/asset_image_app.dart';
+import 'package:pagos_en_linea_emi/config/theme/extension_theme.dart';
+import 'package:pagos_en_linea_emi/utils/asset_image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -7,6 +7,7 @@ import 'package:go_router/go_router.dart';
 class PagoQrScreen extends StatelessWidget {
   static const name = 'pago-qr';
   static const path = '/pago-qr';
+  const PagoQrScreen ({super.key});
 
   
 
@@ -61,10 +62,12 @@ class PagoQrScreen extends StatelessWidget {
                             Column(
                               children: [
                                 SizedBox(height: screenSize.height * 0.01, width: screenSize.width * 0.01),
-                                CircleAvatar (child:  Text('3', style: TextStyle(fontSize: letterSize * 0.01)), 
-                                maxRadius: screenSize.height * 0.012, 
-                                minRadius: screenSize.height * 0.012, 
-                                backgroundColor: Colors.black54,),
+                                CircleAvatar (
+                                  maxRadius: screenSize.height * 0.012, 
+                                  minRadius: screenSize.height * 0.012, 
+                                  backgroundColor: Colors.black54,
+                                  child:  Text('3', style: TextStyle(fontSize: letterSize * 0.01))
+                                ),
                               ],
                             ),
                             SizedBox(width: screenSize.height * 0.005,),

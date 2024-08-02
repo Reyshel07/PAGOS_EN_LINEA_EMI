@@ -1,6 +1,6 @@
-import 'package:PAGOS_EN_LINIA_EMI/config/theme/extension_theme.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/Pago_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/utils/asset_image_app.dart';
+import 'package:pagos_en_linea_emi/config/theme/extension_theme.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/pago_provider.dart';
+import 'package:pagos_en_linea_emi/utils/asset_image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -9,6 +9,7 @@ class PagoTigoMoneyScreen extends StatelessWidget {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   static const name = 'pago-tigo-money';
   static const path = '/pago-tigo-money';
+  PagoTigoMoneyScreen ({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -66,11 +67,11 @@ class PagoTigoMoneyScreen extends StatelessWidget {
                                   SizedBox(
                                       height: screenSize.height * 0.01,
                                       width: screenSize.width * 0.01),
-                                  CircleAvatar(
-                                    child: Text('3', style: TextStyle(fontSize: letterSize * 0.01),),
+                                  CircleAvatar(                                  
                                     maxRadius: screenSize.height * 0.012,
                                     minRadius: screenSize.height * 0.012,
                                     backgroundColor: Colors.black54,
+                                    child: Text('3', style: TextStyle(fontSize: letterSize * 0.01),),
                                   ),
                                 ],
                               ),

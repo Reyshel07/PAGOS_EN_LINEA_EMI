@@ -1,6 +1,6 @@
-import 'package:PAGOS_EN_LINIA_EMI/models/buscador_api.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/auth_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/screens/seleccionar_detalle_a_pagar.dart';
+import 'package:pagos_en_linea_emi/models/buscador_api.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/seleccionar_detalle_a_pagar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -27,8 +27,6 @@ class BucarEstudianteProvider extends ChangeNotifier {
   String? valueCant;
   String codUni = '';
   String nit = '';
-  String CantPag = '';
-  String CogPag = '';
 
   Future<void> searchIDUser(String idUser, BuildContext context) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -102,7 +100,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
       if (e.response?.statusCode == 400) {
         _showErrorDialog(context, "Error", "Inicio de sesión caducado",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
       } else {
-        _showErrorDialog(context, "Error", "Error al realizar la solicitud: Error de conexion",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
+        _showErrorDialog(context, "Error", "Error al realizar la solicitud: Error de conexion",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context); context.pop();});
       }
     } catch (e) {
       _showErrorDialog(context, "Error inesperado", "Ocurrió un error: volver a intentar",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
@@ -195,8 +193,8 @@ class BucarEstudianteProvider extends ChangeNotifier {
           title: Text(mensaje),
           actions: <Widget>[
             TextButton(
-              child: Text(textoBoton, style: TextStyle(color:  Color.fromARGB(255, 12, 68, 114),),),
-                onPressed: onPressed               
+              onPressed: onPressed,  
+              child: Text(textoBoton, style: const TextStyle(color:  Color.fromARGB(255, 12, 68, 114),),),                            
             ),
           ],
         );

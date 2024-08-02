@@ -1,11 +1,11 @@
-import 'package:PAGOS_EN_LINIA_EMI/config/theme/extension_theme.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/auth_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/buscar_estudiante_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/theme_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/screens/login_screen.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/screens/pago_de_cuentas_screen.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/widgets/custom_table_widget.dart';
-import 'package:PAGOS_EN_LINIA_EMI/utils/asset_image_app.dart';
+import 'package:pagos_en_linea_emi/config/theme/extension_theme.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/theme_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/login_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/pago_de_cuentas_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/widgets/custom_table_widget.dart';
+import 'package:pagos_en_linea_emi/utils/asset_image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class SeleccionarDetalleScreen extends StatefulWidget {
   static const name = 'seleccionar-detalle';
   static const path = '/seleccionar-detalle'; 
+  const SeleccionarDetalleScreen ({super.key});
 
   @override
   State<SeleccionarDetalleScreen> createState() =>

@@ -1,12 +1,12 @@
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/auth_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:math';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/buscar_estudiante_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/counters.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/counters.dart';
 
 class PagoService {
   final Dio _dio = Dio();

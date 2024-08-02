@@ -1,10 +1,10 @@
-import 'package:PAGOS_EN_LINIA_EMI/presentation/screens/login_screen.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/screens/pago_de_cuentas_screen.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/screens/seleccionar_detalle_a_pagar.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/Pago_tigo_money.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_bcp.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_qr.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_visa.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/login_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/pago_de_cuentas_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/seleccionar_detalle_a_pagar.dart';
+import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_tigo_money.dart';
+import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_bcp.dart';
+import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_qr.dart';
+import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_visa.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -36,12 +36,12 @@ class AppRouter {
     GoRoute(
       path: SeleccionarDetalleScreen.path,
       name: SeleccionarDetalleScreen.name,
-      builder: (context, state) =>  SeleccionarDetalleScreen(),
+      builder: (context, state) => const SeleccionarDetalleScreen(),
     ),
      GoRoute(
       path: PagoCuentasScreen.path,
       name: PagoCuentasScreen.name,
-      builder: (context, state) => PagoCuentasScreen(totalMonto: 0.0,totalDescuento: 0.0,monto: 0.0,selectedItems: const  [],),
+      builder: (context, state) => const PagoCuentasScreen(totalMonto: 0.0,totalDescuento: 0.0,monto: 0.0,selectedItems: [],),
     ),
     GoRoute(
       path: PagoVisaScreen.path,
@@ -61,7 +61,7 @@ class AppRouter {
     GoRoute(
       path: PagoQrScreen.path,
       name: PagoQrScreen.name,
-      builder: (context, state) => PagoQrScreen(),)
+      builder: (context, state) => const PagoQrScreen(),)
   ],
 );
 

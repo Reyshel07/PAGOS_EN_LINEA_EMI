@@ -1,8 +1,8 @@
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/buscar_estudiante_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class datosenvio extends StatefulWidget {
+class DatosEnvio extends StatefulWidget {
   final GlobalKey<FormState> _formKey;
   final double topPadding;
   final Size screenSize;
@@ -13,7 +13,7 @@ class datosenvio extends StatefulWidget {
   final String valueRazonSocial;
   final String valueCorreo;
 
-  datosenvio({
+  const DatosEnvio({
     super.key,
     required GlobalKey<FormState> formKey,
     required this.topPadding,
@@ -27,10 +27,10 @@ class datosenvio extends StatefulWidget {
   }) : _formKey = formKey;
 
   @override
-  State<datosenvio> createState() => _datosenvioState();
+  State<DatosEnvio> createState() => _DatosEnvioState();
 }
 
-class _datosenvioState extends State<datosenvio> {
+class _DatosEnvioState extends State<DatosEnvio> {
   String? selectedOption;
 
   @override
@@ -44,8 +44,7 @@ class _datosenvioState extends State<datosenvio> {
       'NIT',
       'Pasaporte',
       'Otros'
-    ];
-    
+    ];   
     return Form(
       key: widget._formKey,
       child: Padding(padding: EdgeInsets.only(top: widget.topPadding * 0.05),
@@ -74,10 +73,12 @@ class _datosenvioState extends State<datosenvio> {
                     Column(
                       children: [
                         SizedBox(height: widget.screenSize.height * 0.01, width: widget.screenSize.width * 0.01),
-                        CircleAvatar(child: Text('2',style: TextStyle(fontSize: widget.letterSize * 0.01),), 
-                        maxRadius: widget.screenSize.height * 0.012, 
-                        minRadius: widget.screenSize.height * 0.012, 
-                        backgroundColor: Colors.black54,),
+                        CircleAvatar(
+                          maxRadius: widget.screenSize.height * 0.012, 
+                          minRadius: widget.screenSize.height * 0.012, 
+                          backgroundColor: Colors.black54,
+                          child: Text('2',style: TextStyle(fontSize: widget.letterSize * 0.01),)
+                        ),
                       ],
                     ),
                     SizedBox(width: widget.screenSize.height * 0.005),

@@ -1,8 +1,8 @@
 
-import 'package:PAGOS_EN_LINIA_EMI/config/router/app_router.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/auth_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/theme_provider.dart';
-import 'package:PAGOS_EN_LINIA_EMI/presentation/providers/buscar_estudiante_provider.dart';
+import 'package:pagos_en_linea_emi/config/router/app_router.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/theme_provider.dart';
+import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_core/firebase_core.dart';
