@@ -1,4 +1,3 @@
-
 import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
 import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_tigo_money.dart';
 import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_bcp.dart';
@@ -230,7 +229,7 @@ class FormaPago extends StatelessWidget {
               if(_formKey.currentState?.validate()?? false){
                 Navigator.push(
                   context, MaterialPageRoute
-                  (builder:(context)=> PagoQrScreen())
+                  (builder:(context)=> const PagoQrScreen())
                 );
               }
             },

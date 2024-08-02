@@ -58,10 +58,10 @@ class BucarEstudianteProvider extends ChangeNotifier {
       if (e.response?.statusCode == 400) {
         _showErrorDialog(context, "Usuario no encontrado", "Volver a ingresar el CI o Codigo correcto",true,(){context.pop();});
       } else {
-        _showErrorDialog(context, "Error", "Error al realizar la solicitud: Error de conexion",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
+        _showErrorDialog(context, "Error", "Error al realizar la solicitud: Error de conexion",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);context.pop();});
       }
     } catch (e) {
-      _showErrorDialog(context, "Error inesperado", "Ocurrió un error: $e",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
+      _showErrorDialog(context, "Error inesperado", "Ocurrió un error: Volver a intentar",true,(){buscarEstudianteProvider.listaPagosPendientes.clear(); authProvider.logOut(context);});
     }
   }
 

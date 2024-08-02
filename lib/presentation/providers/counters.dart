@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-
 class CountersServices {
 
   final FirebaseFirestore _firebaseFirestore = FirebaseFirestore.instance;
@@ -16,11 +15,10 @@ class CountersServices {
           
           int nuevoCount = countInt+1;
           transaction.set(counterRef, {'count':nuevoCount});
-          print(nuevoCount);
         }
       );
     } catch (e) {
-      
+      print(e);      
     }
   }
 
@@ -35,11 +33,11 @@ class CountersServices {
           
           int nuevoCount = countIntCo+1;
           transaction.set(counterRef, {'countCo':nuevoCount});
-          print(nuevoCount);
+
         }
       );
     } catch (e) {
-      
+      print(e);
     }
   }
 
@@ -54,11 +52,10 @@ class CountersServices {
           
           int nuevoCount = countIntSc+1;
           transaction.set(counterRef, {'countSc':nuevoCount});
-          print(nuevoCount);
         }
       );
     } catch (e) {
-      
+      print(e);
     }
   }
 
@@ -73,11 +70,10 @@ class CountersServices {
           
           int nuevoCount = countIntSc+1;
           transaction.set(counterRef, {'countLp':nuevoCount});
-          print(nuevoCount);
         }
       );
     } catch (e) {
-      
+      print(e);
     }
   }
 
@@ -92,11 +88,10 @@ class CountersServices {
           
           int nuevoCount = countIntSc+1;
           transaction.set(counterRef, {'countRi':nuevoCount});
-          print(nuevoCount);
         }
       );
     } catch (e) {
-      
+      print(e);
     }
   }
 

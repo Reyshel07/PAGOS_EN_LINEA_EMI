@@ -11,7 +11,6 @@ import 'package:pagos_en_linea_emi/presentation/providers/counters.dart';
 class PagoService {
   final Dio _dio = Dio();
   
-
   Future<void> enviarDatos(BuildContext context) async {
     final prefs = await SharedPreferences.getInstance();
     final countServi = CountersServices();
@@ -149,9 +148,9 @@ class PagoService {
         return AlertDialog(
           content: Text(mensaje),
           actions: <Widget>[
-            TextButton(
-              child: Text(textoBoton),
-              onPressed: onPressed               
+            TextButton(             
+              onPressed: onPressed,
+              child: Text(textoBoton)              
             ),
           ],
         );
