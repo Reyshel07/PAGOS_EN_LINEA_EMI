@@ -1,8 +1,8 @@
 import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_tigo_money.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_bcp.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_qr.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_visa.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_bcp.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_qr.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_tigo_money.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_visa.dart';
 import 'package:pagos_en_linea_emi/utils/asset_image_app.dart';
 import 'package:flutter/material.dart';
 

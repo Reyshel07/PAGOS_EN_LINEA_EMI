@@ -100,7 +100,7 @@ class PagoService {
 
     try {
       final response = await _dio.post(
-        'http://test.emi.edu.bo/pago',
+        'http://test1.emi.edu.bo/pago',
         data: data,
         options: Options(headers: headers),
       );

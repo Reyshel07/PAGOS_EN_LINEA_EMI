@@ -2,12 +2,12 @@ import 'package:pagos_en_linea_emi/config/theme/extension_theme.dart';
 import 'package:pagos_en_linea_emi/models/buscador_api.dart';
 import 'package:pagos_en_linea_emi/presentation/providers/pago_provider.dart';
 import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/datos_envio.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/datos_envio.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/detalles_pago.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/forma_pago.dart';
 import 'package:pagos_en_linea_emi/utils/asset_image_app.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/detalles_pago.dart';
 import 'package:provider/provider.dart';
 
 class PagoCuentasScreen extends StatefulWidget {

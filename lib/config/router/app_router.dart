@@ -1,10 +1,10 @@
-import 'package:pagos_en_linea_emi/presentation/screens/login_screen.dart';
-import 'package:pagos_en_linea_emi/presentation/screens/pago_de_cuentas_screen.dart';
-import 'package:pagos_en_linea_emi/presentation/screens/seleccionar_detalle_a_pagar.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_tigo_money.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_bcp.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_qr.dart';
-import 'package:pagos_en_linea_emi/presentation/widgets/pago_screens.dart/forma_pago_screen.dart/pago_visa.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/login/login_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/pago_de_cuentas_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_bcp.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_qr.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_tigo_money.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_visa.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/seleccionar_detalle_a_pagar.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

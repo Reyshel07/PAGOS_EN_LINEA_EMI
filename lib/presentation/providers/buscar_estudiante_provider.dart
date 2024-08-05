@@ -1,15 +1,15 @@
 import 'package:pagos_en_linea_emi/models/buscador_api.dart';
 import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
-import 'package:pagos_en_linea_emi/presentation/screens/seleccionar_detalle_a_pagar.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/seleccionar_detalle_a_pagar.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class BucarEstudianteProvider extends ChangeNotifier {
   final dio = Dio();
-  String baseURL = 'https://test.emi.edu.bo';
+  String baseURL = 'https://test1.emi.edu.bo';
 
   List<Item> listaPagosPendientes = [];
   List<String> selectedItems = [];
