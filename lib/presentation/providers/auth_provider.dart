@@ -23,8 +23,6 @@ class AuthProvider extends ChangeNotifier {
           headers: {
             
           },
-          receiveTimeout: const Duration(seconds: 1),
-          sendTimeout: const Duration(seconds: 1),
         ),
       );
 

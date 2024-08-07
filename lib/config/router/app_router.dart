@@ -1,4 +1,5 @@
 import 'package:pagos_en_linea_emi/presentation/screens/login/login_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/options_screen.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/pago_de_cuentas_screen.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_bcp.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_qr.dart';
@@ -61,7 +62,13 @@ class AppRouter {
     GoRoute(
       path: PagoQrScreen.path,
       name: PagoQrScreen.name,
-      builder: (context, state) => const PagoQrScreen(),)
+      builder: (context, state) => const PagoQrScreen(),
+    ),
+    GoRoute(
+      path: OptionsScreen.paht,
+      name: OptionsScreen.name,
+      builder: (context, state) => const OptionsScreen(),
+    )
   ],
 );
 
