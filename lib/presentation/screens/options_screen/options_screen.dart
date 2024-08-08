@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
-import 'package:pagos_en_linea_emi/presentation/screens/options_screen/historial_notas/note_history.dart';
-import 'package:pagos_en_linea_emi/presentation/screens/options_screen/historial_pagos/payment_history.dart';
-import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/seleccionar_detalle_a_pagar.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/historial_notas/note_history.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/historial_pagos/payment_history.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/select_detail_screen/seleccionar_detalle_a_pagar.dart';
 import 'package:pagos_en_linea_emi/utils/asset_image_app.dart';
 import 'package:provider/provider.dart';
 

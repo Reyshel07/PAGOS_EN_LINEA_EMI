@@ -14,7 +14,7 @@ class PaymentHistoryScreen extends StatelessWidget {
     final double topPadding = screenSize.height * 0.2;
     final double broadSpacing = screenSize.width * 0.02;
     //final double containerSize = screenSize.height * 0.3;
-    final double smallSpacing = screenSize.height * 0.02;
+    //final double smallSpacing = screenSize.height * 0.02;
     final double letterSize = screenSize.height;
     final double imgSize = screenSize.width * 0.4;
     return Scaffold(
