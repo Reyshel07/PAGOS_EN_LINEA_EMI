@@ -31,7 +31,7 @@ class OptionsScreen extends StatelessWidget {
               child: Container(
                 height: containerSize,
                 width: containerSize,
-                color: Color.fromARGB(255, 12, 68, 114),
+                color:const Color.fromARGB(255, 12, 68, 114),
               ),
             )
           ),
@@ -43,7 +43,7 @@ class OptionsScreen extends StatelessWidget {
               child: Container(
                 height: containerSize * 6.8,
                 width: containerSize * 0.6,
-                color: Color.fromRGBO(255, 230, 5, 1),
+                color: const Color.fromRGBO(255, 230, 5, 1),
               ),
             )
           ),
@@ -55,7 +55,7 @@ class OptionsScreen extends StatelessWidget {
               child: Container(
                 height: containerSize,
                 width: containerSize,
-                color: Color.fromARGB(255, 12, 68, 114),
+                color: const Color.fromARGB(255, 12, 68, 114),
               ),
             )
           ),
@@ -83,14 +83,14 @@ class OptionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context, 
                                   MaterialPageRoute(
-                                    builder: (context)=>SeleccionarDetalleScreen()
+                                    builder: (context)=> const SeleccionarDetalleScreen()
                                   )
                                 );
                               },
                               child: Container(
                                 width: containerSize * 0.5,
                                 height: containerSize *0.5,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 12, 68, 114),
                                   borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
@@ -106,7 +106,7 @@ class OptionsScreen extends StatelessWidget {
                                       'PAGO EMI', 
                                       style: TextStyle(
                                         fontSize: letterSize * 0.015, 
-                                        color: Color.fromRGBO(255, 230, 5, 1),
+                                        color: const Color.fromRGBO(255, 230, 5, 1),
                                         fontWeight: FontWeight.bold
                                       ),
                                       textAlign: TextAlign.center,
@@ -121,14 +121,14 @@ class OptionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context, 
                                   MaterialPageRoute(
-                                    builder: (context)=> PaymentHistoryScreen()
+                                    builder: (context)=> const PaymentHistoryScreen()
                                   )
                                 );
                               },
                               child: Container(
                                 width: containerSize * 0.5,
                                 height: containerSize *0.5,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 12, 68, 114),
                                   borderRadius: BorderRadius.all(Radius.circular(10))
                                 ),
@@ -145,7 +145,7 @@ class OptionsScreen extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: letterSize * 0.015, 
                                         fontWeight: FontWeight.bold, 
-                                        color: Color.fromRGBO(255, 230, 5, 1),
+                                        color: const Color.fromRGBO(255, 230, 5, 1),
                                       ),
                                       textAlign: TextAlign.center,
                                     ),
@@ -159,14 +159,14 @@ class OptionsScreen extends StatelessWidget {
                                 Navigator.push(
                                   context, 
                                   MaterialPageRoute(
-                                    builder: (context) => NoteHistoryScreen()
+                                    builder: (context) => const NoteHistoryScreen()
                                   )
                                 );
                               },
                               child: Container(
                                 width: containerSize * 0.5,
                                 height: containerSize * 0.5,
-                                decoration: BoxDecoration(
+                                decoration: const BoxDecoration(
                                   color: Color.fromARGB(255, 12, 68, 114),
                                   borderRadius: BorderRadius.all(Radius.circular(10))
                                   
@@ -184,7 +184,7 @@ class OptionsScreen extends StatelessWidget {
                                       style: TextStyle(
                                         fontSize: letterSize * 0.015,
                                         fontWeight: FontWeight.bold,
-                                        color: Color.fromRGBO(255, 230, 5, 1),
+                                        color: const Color.fromRGBO(255, 230, 5, 1),
                                       ),
                                       textAlign: TextAlign.center,
                                     )
@@ -200,7 +200,14 @@ class OptionsScreen extends StatelessWidget {
                         onPressed: (){
                         authProvider.logOut(context);
                         }, 
-                      child: const Text('Cerrar Sesion', style: TextStyle(color: Color.fromARGB(255, 12, 68, 114),),),)
+                        child: const Text(
+                          'Cerrar Sesion', 
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 12, 68, 114),
+                          ),
+                          textAlign: TextAlign.start,
+                        )
+                      ),
                     ],
                   ),
                 )

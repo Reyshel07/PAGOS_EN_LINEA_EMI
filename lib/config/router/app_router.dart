@@ -44,7 +44,7 @@ class AppRouter {
      GoRoute(
       path: PagoCuentasScreen.path,
       name: PagoCuentasScreen.name,
-      builder: (context, state) => const PagoCuentasScreen(totalMonto: 0.0,totalDescuento: 0.0,monto: 0.0,selectedItems: [],),
+      builder: (context, state) => PagoCuentasScreen(totalMonto: 0.0,totalDescuento: 0.0,monto: 0.0,selectedItems: const [],),
     ),
     GoRoute(
       path: PagoVisaScreen.path,

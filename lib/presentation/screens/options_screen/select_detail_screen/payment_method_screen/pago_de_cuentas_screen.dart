@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-class PagoCuentasScreen extends StatefulWidget {
+class PagoCuentasScreen extends StatelessWidget {
   final double totalMonto;
   final List<Item> selectedItems;
   final double totalDescuento;
@@ -20,21 +20,19 @@ class PagoCuentasScreen extends StatefulWidget {
 
 
 
-  const PagoCuentasScreen({
+  PagoCuentasScreen({
   Key? key, 
   required this.totalMonto, 
   required this.selectedItems, 
   required this.totalDescuento,
   required this.monto }):super(key: key);
 
-  @override
-  State<PagoCuentasScreen> createState() => _PagoCuentasScreenState();
-}
-
-class _PagoCuentasScreenState extends State<PagoCuentasScreen> {
   final PagoService pagoService = PagoService();
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   final TextEditingController ciController = TextEditingController();
+
   final TextEditingController razonSocialController = TextEditingController();
 
   @override
@@ -97,9 +95,9 @@ class _PagoCuentasScreenState extends State<PagoCuentasScreen> {
                   DetallesPago(
                     topPadding: topPadding, screenSize: screenSize, 
                     smallSpacing: smallSpacing, letterSize: letterSize, 
-                    broadSpacing: broadSpacing,totalMonto: widget.totalMonto, 
-                    selectedItems: const[],totalDescuento: widget.totalDescuento ,
-                    monto: widget.monto),
+                    broadSpacing: broadSpacing,totalMonto: totalMonto, 
+                    totalDescuento: totalDescuento ,
+                    monto: monto, selectedItems: selectedItems ,),
                   DatosEnvio(
                     topPadding: topPadding, 
                     screenSize: screenSize, 

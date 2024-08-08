@@ -11,9 +11,10 @@ class PaymentHistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
-    //final double topPadding = screenSize.height * 0.2;
+    final double topPadding = screenSize.height * 0.2;
+    final double broadSpacing = screenSize.width * 0.02;
     //final double containerSize = screenSize.height * 0.3;
-    //final double smallSpacing = screenSize.height * 0.02;
+    final double smallSpacing = screenSize.height * 0.02;
     final double letterSize = screenSize.height;
     final double imgSize = screenSize.width * 0.4;
     return Scaffold(
@@ -31,15 +32,18 @@ class PaymentHistoryScreen extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Padding(padding: EdgeInsets.all(10),
+          Padding(padding: EdgeInsets.all(topPadding * 0.1),
           child: Column(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    'HISTORIAL DE PAGOS EMI',
-                    style: TextStyle(fontSize: letterSize * 0.03, fontWeight: FontWeight.bold),
+                  SizedBox(
+                    width: broadSpacing * 25,
+                    child: Text(
+                      'HISTORIAL DE PAGOS EMI',
+                      style: TextStyle(fontSize: letterSize * 0.030, fontWeight: FontWeight.bold),
+                    ),
                   ),
                   Image.asset(AssetImageApp.getLogo, width: imgSize * 0.5,),
                 ],
