@@ -1,5 +1,4 @@
 import 'package:pagos_en_linea_emi/config/theme/extension_theme.dart';
-import 'package:pagos_en_linea_emi/presentation/providers/auth_provider.dart';
 import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
 import 'package:pagos_en_linea_emi/presentation/providers/theme_provider.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/login/login_screen.dart';
@@ -41,7 +40,6 @@ class _SeleccionarDetalleScreenState extends State<SeleccionarDetalleScreen> {
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
     final buscarEstudianteProvider =Provider.of<BucarEstudianteProvider>(context);
-    final authProvider = Provider.of<AuthProvider>(context);
     final screenSize = MediaQuery.of(context).size;
     final double topPadding = screenSize.height * 0.2;
     final double smallSpacing = screenSize.height * 0.02;
@@ -59,15 +57,18 @@ class _SeleccionarDetalleScreenState extends State<SeleccionarDetalleScreen> {
               themeProvider.changeTheme();
             }, 
             icon:  Icon( themeProvider.isDark ? Icons.light_mode : Icons.dark_mode ),
-          ),
-          TextButton(
-            onPressed: (){
-            buscarEstudianteProvider.listaPagosPendientes.clear();
-            authProvider.logOut(context);
-            
-            }, 
-          child: const Text('Cerrar Sesion', style: TextStyle(color: Colors.white),),)
+          ),          
         ],
+        leading: IconButton(
+          onPressed: () {
+            buscarEstudianteProvider.listaPagosPendientes.clear();
+            context.pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
+        ),
       ),
       body: Padding(
         padding: EdgeInsets.all(topPadding * 0.10),

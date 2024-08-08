@@ -1,4 +1,6 @@
 import 'package:pagos_en_linea_emi/presentation/screens/login/login_screen.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/historial_notas/note_history.dart';
+import 'package:pagos_en_linea_emi/presentation/screens/options_screen/historial_pagos/payment_history.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/options_screen/options_screen.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/pago_de_cuentas_screen.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/options_screen/select_detail_screen/payment_method_screen/widgets_pago/payment_methods_screen/pago_bcp.dart';
@@ -24,7 +26,7 @@ class AppRouter {
     if(!isAuth){
       return LoginScreen.paht;
     }else{
-      return SeleccionarDetalleScreen.path;
+      return OptionsScreen.paht;
     }
     
   },
@@ -68,7 +70,17 @@ class AppRouter {
       path: OptionsScreen.paht,
       name: OptionsScreen.name,
       builder: (context, state) => const OptionsScreen(),
-    )
+    ),
+    GoRoute(
+      path: NoteHistoryScreen.paht,
+      name: NoteHistoryScreen.name,
+      builder: (context, state) => const NoteHistoryScreen(),
+    ),
+    GoRoute(
+      path: PaymentHistoryScreen.path,
+      name: PaymentHistoryScreen.name,
+      builder: (context, state) => const PaymentHistoryScreen(),
+    ),
   ],
 );
 
