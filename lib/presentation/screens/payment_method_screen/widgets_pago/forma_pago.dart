@@ -1,4 +1,3 @@
-import 'package:pagos_en_linea_emi/presentation/providers/buscar_estudiante_provider.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/payment_methods_screen/pago_bcp.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/payment_methods_screen/pago_qr.dart';
 import 'package:pagos_en_linea_emi/presentation/screens/payment_methods_screen/pago_tigo_money.dart';
@@ -17,8 +16,7 @@ class FormaPago extends StatelessWidget {
     required this.broadSpacing,
     required this.letterSize,
     required this.imgSize,
-    required this.image,
-    required BuscarEstudianteProvider buscarEstudianteProvider,
+    required this.imageSize,
   }): _formKey = formKey;
 
   final GlobalKey<FormState> _formKey;
@@ -28,7 +26,7 @@ class FormaPago extends StatelessWidget {
   final double broadSpacing;
   final double letterSize;
   final double imgSize;
-  final double image;
+  final double imageSize;
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +81,7 @@ class FormaPago extends StatelessWidget {
             style: TextStyle(fontSize: letterSize * 0.016), 
             textAlign: TextAlign.justify,),
           ),
-          Text('Targetas', style: TextStyle(
+          Text('Tarjetas', style: TextStyle(
            fontSize: letterSize * 0.016,
            fontWeight: FontWeight.bold),
           textAlign: TextAlign.start,),
@@ -98,7 +96,7 @@ class FormaPago extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: broadSpacing * 18,
-                      child: Text('Paga con targetas de Debito/Credito ATC', 
+                      child: Text('Paga con tarjetas de Debito/Credito ATC', 
                       textAlign: TextAlign.justify,
                        style: TextStyle(
                         color: Colors.black54, 
@@ -110,7 +108,7 @@ class FormaPago extends StatelessWidget {
                 SizedBox(width: broadSpacing * 5),
                 SizedBox(
                   width: broadSpacing * 13,
-                  child:  Text('Paga con targeta del BCP',
+                  child:  Text('Paga con tarjeta del BCP',
                    textAlign: TextAlign.start,
                    style: TextStyle(
                     color: Colors.black54,
@@ -143,7 +141,7 @@ class FormaPago extends StatelessWidget {
                   child: Image.asset(
                     AssetImageApp.getvisa, 
                     width:imgSize * 0.4, 
-                    height: image * 0.12
+                    height: imageSize * 0.12
                   )
                 ),
               ),
@@ -167,7 +165,7 @@ class FormaPago extends StatelessWidget {
                   child: Image.asset(
                     AssetImageApp.getbcp, 
                     width:imgSize * 0.4, 
-                    height: image * 0.12
+                    height: imageSize * 0.12
                     )
                 ),
               ),
@@ -205,7 +203,7 @@ class FormaPago extends StatelessWidget {
               child: Image.asset(
                 AssetImageApp.gettigoMoney,
                  width:imgSize * 0.5, 
-                 height: image * 0.11
+                 height: imageSize * 0.11
               )
             ),
           ),
@@ -235,7 +233,7 @@ class FormaPago extends StatelessWidget {
             },
             child: Image.asset(AssetImageApp.getqr,
              width:imgSize * 0.6,
-              height: image * 0.18
+              height: imageSize * 0.18
             ),
           )
         ],

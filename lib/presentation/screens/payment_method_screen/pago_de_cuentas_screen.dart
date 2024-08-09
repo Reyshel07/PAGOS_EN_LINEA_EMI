@@ -41,7 +41,7 @@ class PagoCuentasScreen extends StatelessWidget {
     final screenSize = MediaQuery.of(context).size;
     final double topPadding = screenSize.height * 0.2;
     final double imgSize = screenSize.width * 0.5;
-    final double image = screenSize.height * 0.5;
+    final double imageSize = screenSize.height * 0.5;
     final double smallSpacing = screenSize.height * 0.02;
     final double broadSpacing = screenSize.width * 0.02;
     final double letterSize = screenSize.height;
@@ -112,8 +112,8 @@ class PagoCuentasScreen extends StatelessWidget {
                   FormaPago(
                     topPadding: topPadding, screenSize: screenSize, 
                     smallSpacing: smallSpacing, broadSpacing: broadSpacing, 
-                    letterSize: letterSize, imgSize: imgSize, image: image, 
-                    formKey: _formKey, buscarEstudianteProvider: buscarEstudianteProvider,
+                    letterSize: letterSize, imgSize: imgSize, imageSize: imageSize, 
+                    formKey: _formKey,
                   ),
                 ],
               )
