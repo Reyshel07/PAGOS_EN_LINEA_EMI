@@ -215,67 +215,61 @@ class DetallesPago extends StatelessWidget {
             child: const Divider()
             ),
             SizedBox(height: smallSpacing * 0.5),
-            SizedBox(               
-              width: screenSize.width * 0.85,
-               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [                      
-                  Text('Sub Total (Bs):',
-                   style: TextStyle(
-                    fontSize: letterSize * 0.015,
-                    fontWeight: FontWeight.bold,
-                   )
-                  ),
-                  SizedBox(width: broadSpacing ),
-                  Text('$totalMonto',
-                   style: TextStyle(
-                    fontSize: letterSize *0.015,
-                    )
-                  ),
-                ],
-              ),
-            ),
             SizedBox(
               width: screenSize.width * 0.85,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Text('Descuento(Bs):',
-                    style: TextStyle(
-                      fontSize: letterSize * 0.015,
-                      fontWeight: FontWeight.bold, 
-                    )
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text('Sub Total (Bs):',
+                        style: TextStyle(
+                          fontSize: letterSize * 0.015,
+                          fontWeight: FontWeight.bold,
+                        )
+                      ),
+                      Text('Descuento(Bs):',
+                        style: TextStyle(
+                          fontSize: letterSize * 0.015,
+                          fontWeight: FontWeight.bold, 
+                        )
+                      ),
+                      Text('MONTO TOTAL (Bs):',
+                        style: TextStyle(
+                          fontSize: letterSize *0.015,
+                          fontWeight: FontWeight.bold, 
+                          color: const Color.fromARGB(255, 12, 68, 114)
+                        )
+                      ),
+                    ],
                   ),
-                  SizedBox(width: broadSpacing),
-                  Text('$totalDescuento', 
-                    style: TextStyle(
-                      fontSize: letterSize * 0.015, 
+                  SizedBox(
+                    width: screenSize.width * 0.2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text('$totalMonto',
+                          style: TextStyle(
+                            fontSize: letterSize *0.015,
+                          )
+                        ),
+                        Text('$totalDescuento', 
+                          style: TextStyle(
+                            fontSize: letterSize * 0.015, 
+                          )
+                        ),
+                        Text('$monto', 
+                          style: TextStyle(
+                            fontSize: letterSize * 0.015,
+                          ),
+                        ),
+                      ],
                     )
                   ),
                 ],
               ),
             ),
-            SizedBox(
-              width: screenSize.width * 0.85,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text('MONTO TOTAL (Bs):',
-                   style: TextStyle(
-                      fontSize: letterSize *0.015,
-                      fontWeight: FontWeight.bold, 
-                      color: const Color.fromARGB(255, 12, 68, 114)
-                    )
-                  ),
-                  SizedBox(width: broadSpacing),
-                  Text('$monto', 
-                    style: TextStyle(
-                      fontSize: letterSize * 0.015,
-                    ),
-                  ),
-                ],
-              ),
-            ), 
             SizedBox(height: smallSpacing * 2),                      
             SizedBox(
               width: screenSize.width * 0.85,
