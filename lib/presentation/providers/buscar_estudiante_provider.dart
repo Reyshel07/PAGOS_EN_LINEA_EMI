@@ -7,7 +7,7 @@ import 'package:pagos_en_linea_emi/presentation/screens/options_screen/options_s
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class BucarEstudianteProvider extends ChangeNotifier {
+class BuscarEstudianteProvider extends ChangeNotifier {
   final dio = Dio();
   String baseURL = 'https://test1.emi.edu.bo';
 
@@ -33,7 +33,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
     prefs.setString('idUser', idUser);
 
     String token = prefs.getString('token') ?? '';
-    final buscarEstudianteProvider = Provider.of<BucarEstudianteProvider>(context, listen: false);
+    final buscarEstudianteProvider = Provider.of<BuscarEstudianteProvider>(context, listen: false);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
     final data = {
@@ -69,7 +69,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String idUser = prefs.getString('idUser') ?? '';
     String token = prefs.getString('token') ?? '';
-    final buscarEstudianteProvider = Provider.of<BucarEstudianteProvider>(context, listen: false);
+    final buscarEstudianteProvider = Provider.of<BuscarEstudianteProvider>(context, listen: false);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
     final data = {
       "cliente": idUser,
@@ -123,7 +123,7 @@ class BucarEstudianteProvider extends ChangeNotifier {
 
   void onCheckboxChanged(bool? value, String codigoPago, BuildContext context) {
     final item = getItemPorCodigoPAgo(codigoPago);
-    final buscarEstudianteProvider = Provider.of<BucarEstudianteProvider>(context, listen: false);
+    final buscarEstudianteProvider = Provider.of<BuscarEstudianteProvider>(context, listen: false);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
 
     if (item != null) {

@@ -37,7 +37,7 @@ class PagoCuentasScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final buscarEstudianteProvider =Provider.of<BucarEstudianteProvider>(context);
+    final buscarEstudianteProvider =Provider.of<BuscarEstudianteProvider>(context);
     final screenSize = MediaQuery.of(context).size;
     final double topPadding = screenSize.height * 0.2;
     final double imgSize = screenSize.width * 0.5;
@@ -97,7 +97,8 @@ class PagoCuentasScreen extends StatelessWidget {
                     smallSpacing: smallSpacing, letterSize: letterSize, 
                     broadSpacing: broadSpacing,totalMonto: totalMonto, 
                     totalDescuento: totalDescuento ,
-                    monto: monto, selectedItems: selectedItems ,),
+                    monto: monto, selectedItems: selectedItems 
+                  ),
                   DatosEnvio(
                     topPadding: topPadding, 
                     screenSize: screenSize, 
@@ -107,15 +108,15 @@ class PagoCuentasScreen extends StatelessWidget {
                     formKey: _formKey, valueCi: buscarEstudianteProvider.ci, 
                     valueRazonSocial: buscarEstudianteProvider.ciNit, 
                     valueCorreo: buscarEstudianteProvider.correo,
-                    ),
+                  ),
                   FormaPago(
                     topPadding: topPadding, screenSize: screenSize, 
                     smallSpacing: smallSpacing, broadSpacing: broadSpacing, 
                     letterSize: letterSize, imgSize: imgSize, image: image, 
                     formKey: _formKey, buscarEstudianteProvider: buscarEstudianteProvider,
-                    ),
+                  ),
                 ],
-          )
+              )
             ), 
           ],
         ),

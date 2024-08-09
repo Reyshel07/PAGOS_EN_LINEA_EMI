@@ -15,7 +15,7 @@ void main()async {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context)=> ThemeProvider(),),
-        ChangeNotifierProvider(create: (context)=> BucarEstudianteProvider(),),
+        ChangeNotifierProvider(create: (context)=> BuscarEstudianteProvider(),),
         ChangeNotifierProvider(create: (context)=> AuthProvider(),),
       ],
       child: const MyApp(),

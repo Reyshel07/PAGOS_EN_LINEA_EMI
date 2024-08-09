@@ -18,7 +18,7 @@ class FormaPago extends StatelessWidget {
     required this.letterSize,
     required this.imgSize,
     required this.image,
-    required BucarEstudianteProvider buscarEstudianteProvider,
+    required BuscarEstudianteProvider buscarEstudianteProvider,
   }): _formKey = formKey;
 
   final GlobalKey<FormState> _formKey;

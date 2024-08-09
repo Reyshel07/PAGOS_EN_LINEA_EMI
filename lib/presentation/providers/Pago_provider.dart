@@ -24,7 +24,7 @@ class PagoService {
     
     
     
-    final buscarEstudianteProvider = Provider.of<BucarEstudianteProvider>(context, listen: false);
+    final buscarEstudianteProvider = Provider.of<BuscarEstudianteProvider>(context, listen: false);
     final authProvider = Provider.of<AuthProvider>(context, listen: false);
     valNit = buscarEstudianteProvider.nit;
     valCodUni = buscarEstudianteProvider.codUni;

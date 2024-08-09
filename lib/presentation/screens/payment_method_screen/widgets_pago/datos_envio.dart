@@ -35,7 +35,7 @@ class _DatosEnvioState extends State<DatosEnvio> {
 
   @override
   Widget build(BuildContext context) {
-    final buscarEstudianteProvider =Provider.of<BucarEstudianteProvider>(context);
+    final buscarEstudianteProvider =Provider.of<BuscarEstudianteProvider>(context);
     final screenSize = MediaQuery.of(context).size;
     final double smallSpacing = screenSize.height * 0.02;
     final List<String> option = [

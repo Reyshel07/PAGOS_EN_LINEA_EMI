@@ -25,7 +25,7 @@ class _SeleccionarDetalleScreenState extends State<SeleccionarDetalleScreen> {
   void initState(){
     WidgetsBinding.instance.addPostFrameCallback((_)async{
       SharedPreferences prefs = await SharedPreferences.getInstance();
-      final bucarEstudianteProvider = Provider.of<BucarEstudianteProvider>(context, listen: false);
+      final bucarEstudianteProvider = Provider.of<BuscarEstudianteProvider>(context, listen: false);
 
        bucarEstudianteProvider.listData(context);
        Future.delayed(const Duration(minutes: 10),(){
@@ -39,7 +39,7 @@ class _SeleccionarDetalleScreenState extends State<SeleccionarDetalleScreen> {
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
-    final buscarEstudianteProvider =Provider.of<BucarEstudianteProvider>(context);
+    final buscarEstudianteProvider =Provider.of<BuscarEstudianteProvider>(context);
     final screenSize = MediaQuery.of(context).size;
     final double topPadding = screenSize.height * 0.2;
     final double smallSpacing = screenSize.height * 0.02;
@@ -120,7 +120,7 @@ class _SeleccionarDetalleScreenState extends State<SeleccionarDetalleScreen> {
                     ),
                   ),
                   const Spacer(),
-                  Consumer<BucarEstudianteProvider>(
+                  Consumer<BuscarEstudianteProvider>(
                     builder: (context, provider, child) {
                       return ElevatedButton(
                         onPressed: provider.hasSelectedItems

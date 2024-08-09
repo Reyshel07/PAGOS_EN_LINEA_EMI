@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loginProvider = Provider.of<BucarEstudianteProvider>(context);
+    final loginProvider = Provider.of<BuscarEstudianteProvider>(context);
     final authProvider = Provider.of<AuthProvider>(context);
     final screenSize = MediaQuery.of(context).size;
     final double topPadding = screenSize.height * 0.2;

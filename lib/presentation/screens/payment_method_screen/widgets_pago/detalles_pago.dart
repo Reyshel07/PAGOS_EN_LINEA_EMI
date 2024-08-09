@@ -31,7 +31,7 @@ class DetallesPago extends StatelessWidget {
       padding: EdgeInsets.only(top: topPadding * 0.02),
       child: Container(
         width: screenSize.width * 0.95,
-        height: screenSize.height * 0.55,
+        height: screenSize.height * 0.6,
         decoration:   BoxDecoration(
           border: Border.all(color: Colors.black12),
           borderRadius: const BorderRadius.all(Radius.circular(10))
@@ -134,49 +134,56 @@ class DetallesPago extends StatelessWidget {
             ),
             SizedBox(
               width: screenSize.width *0.85,
-              child:  Divider(height: smallSpacing *0.05)
+              child: const Divider()
             ),
-            SizedBox(height: smallSpacing),
+            SizedBox(height: smallSpacing * 0.01),
             Column(  
               mainAxisSize: MainAxisSize.max,                               
               children: [
                 SizedBox(
-                  height: smallSpacing * 5,
+                  height: smallSpacing * 6.2,
                   width: screenSize.width *0.85,
-                  child: Expanded(
-                    child: ListView.builder(
-                      padding:  EdgeInsets.symmetric( vertical: screenSize.width * 0.005),
-                      itemCount: selectedItems.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        final item = selectedItems[index];
-                        return Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            SizedBox(
-                              width: screenSize.width * 0.4,
-                              child: Text("- ${item.item}", 
-                                style:  TextStyle(
-                                  fontSize: letterSize * 0.015
+                  child: ListView.builder(
+                    padding:  EdgeInsets.symmetric( vertical: screenSize.width * 0.005),
+                    itemCount: selectedItems.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      final item = selectedItems[index];
+                      return Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: screenSize.width * 0.55,
+                            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  width: screenSize.width * 0.4,
+                                  child: Text("- ${item.item}", 
+                                    style:  TextStyle(
+                                      fontSize: letterSize * 0.015,
+                                    ),
+
+                                  )
                                 ),
-                              )
+                                Text("- ${item.descuento}", style:  TextStyle(fontSize: letterSize * 0.015),),
+                              ],
                             ),
-                            Text("- ${item.descuento}", style:  TextStyle(fontSize: letterSize * 0.015),),
-                            SizedBox(
-                              width: screenSize.width *0.05,
-                            ),
-                            Text("-${item.montototal}", style: TextStyle(fontSize: letterSize * 0.015),),
-                          ],
-                        );
-                      },
-                    ),
+                          ),
+                          
+                          SizedBox(
+                            width: screenSize.width *0.05,
+                          ),
+                          Text("-${item.montototal}", style: TextStyle(fontSize: letterSize * 0.015),),
+                        ],
+                      );
+                    },
                   ),
                 )
               ],
             ),
-            SizedBox(height: smallSpacing,),
+            SizedBox(height: smallSpacing *0.01),
             SizedBox(
               width: screenSize.width *0.85,
-              child: Divider(height: smallSpacing * 0.05)
+              child: const Divider(),
             ),
             SizedBox(height: smallSpacing,),
             SizedBox(
@@ -205,7 +212,7 @@ class DetallesPago extends StatelessWidget {
             SizedBox(height: smallSpacing),
             SizedBox(
             width: screenSize.width *0.85,
-            child:  Divider(height: smallSpacing * 0.05)
+            child: const Divider()
             ),
             SizedBox(height: smallSpacing * 0.5),
             SizedBox(               
